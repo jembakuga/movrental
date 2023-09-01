@@ -1,4 +1,4 @@
-CREATE TABLE `kain-db`.MOVIES (
+CREATE TABLE `kain-db`.movies (
 	ID BIGINT auto_increment NOT NULL,
 	TITLE varchar(100) NOT NULL,
 	GENRE varchar(100) NOT NULL,
@@ -8,14 +8,14 @@ CREATE TABLE `kain-db`.MOVIES (
 	CONSTRAINT MOVIES_PK PRIMARY KEY (ID)
 )
 
-CREATE TABLE `kain-db`.`USER` (
+CREATE TABLE `kain-db`.`user` (
 	ID BIGINT auto_increment NOT NULL,
 	NAME varchar(100) NOT NULL,
 	EMAIL_ADDRESS varchar(100) NOT NULL,
 	CONSTRAINT USER_PK PRIMARY KEY (ID)
 )
 
-CREATE TABLE `kain-db`.RENTALS (
+CREATE TABLE `kain-db`.rentals (
 	ID BIGINT auto_increment NOT NULL,
 	USER_ID BIGINT NOT NULL,
 	MOVIES_ID BIGINT NOT NULL,
