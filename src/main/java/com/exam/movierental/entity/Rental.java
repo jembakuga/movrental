@@ -12,7 +12,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Rentals {
+public class Rental {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class Rentals {
 	@ManyToOne
 	@JoinColumn(name="MOVIES_ID", updatable = false)
 	@JsonBackReference
-	private Movies movies;
+	private Movie movie;
 	
 	private Timestamp rentalDate;
 	
@@ -48,12 +48,12 @@ public class Rentals {
 		this.user = user;
 	}
 
-	public Movies getMovies() {
-		return movies;
+	public Movie getMovie() {
+		return movie;
 	}
 
-	public void setMovies(Movies movies) {
-		this.movies = movies;
+	public void setMovie(Movie movie) {
+		this.movie = movie;
 	}
 
 	public Timestamp getRentalDate() {

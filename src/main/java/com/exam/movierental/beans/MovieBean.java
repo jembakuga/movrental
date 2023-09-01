@@ -1,37 +1,31 @@
-package com.exam.movierental.entity;
+package com.exam.movierental.beans;
 
 import java.math.BigDecimal;
-import java.util.HashSet;
-import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.exam.movierental.entity.Movie;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+public class MovieBean {
 
-@Entity
-public class Movies {
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	
+
 	private String title;
-	
+
 	private String genre;
-	
+
 	private int releaseYear;
-	
+
 	private BigDecimal rentalPrice;
-	
+
 	private int noOfCopies;
 	
-	@OneToMany(mappedBy = "movies")
-	@JsonManagedReference
-	private Set<Rentals> rentalsSet = new HashSet<Rentals>();
+	public MovieBean(Movie movies) {
+		this.id = movies.getId();
+		this.title = movies.getTitle();
+		this.genre = movies.getGenre();
+		this.releaseYear = movies.getReleaseYear();
+		this.rentalPrice = movies.getRentalPrice();
+		this.noOfCopies = movies.getNoOfCopies();
+	}
 
 	public Long getId() {
 		return id;
@@ -80,15 +74,6 @@ public class Movies {
 	public void setNoOfCopies(int noOfCopies) {
 		this.noOfCopies = noOfCopies;
 	}
-
-	public Set<Rentals> getRentalsSet() {
-		return rentalsSet;
-	}
-
-	public void setRentalsSet(Set<Rentals> rentalsSet) {
-		this.rentalsSet = rentalsSet;
-	}
-	
 	
 	
 

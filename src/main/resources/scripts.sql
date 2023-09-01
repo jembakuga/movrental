@@ -1,4 +1,4 @@
-CREATE TABLE `kain-db`.movies (
+CREATE TABLE `kain-db`.movie (
 	ID BIGINT auto_increment NOT NULL,
 	TITLE varchar(100) NOT NULL,
 	GENRE varchar(100) NOT NULL,

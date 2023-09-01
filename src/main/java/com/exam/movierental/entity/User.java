@@ -3,6 +3,7 @@ package com.exam.movierental.entity;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.exam.movierental.beans.UserBean;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Entity;
@@ -20,11 +21,21 @@ public class User {
 	
 	private String name;
 	
-	private String emailAddres;
+	private String emailAddress;
 	
 	@OneToMany(mappedBy = "user")
 	@JsonManagedReference
-	private Set<Rentals> rentalsSet = new HashSet<Rentals>();
+	private Set<Rental> rentalsSet = new HashSet<Rental>();
+	
+	public User() {
+		
+	}
+	
+	public User(UserBean userBean) {
+		this.name = userBean.getName();
+		this.emailAddress = userBean.getEmailAddres();
+		this.id = userBean.getId();
+	}
 
 	public Long getId() {
 		return id;
@@ -40,21 +51,21 @@ public class User {
 
 	public void setName(String name) {
 		this.name = name;
+	}	
+
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public String getEmailAddres() {
-		return emailAddres;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
-	public void setEmailAddres(String emailAddres) {
-		this.emailAddres = emailAddres;
-	}
-
-	public Set<Rentals> getRentalsSet() {
+	public Set<Rental> getRentalsSet() {
 		return rentalsSet;
 	}
 
-	public void setRentalsSet(Set<Rentals> rentalsSet) {
+	public void setRentalsSet(Set<Rental> rentalsSet) {
 		this.rentalsSet = rentalsSet;
 	}
 	
