@@ -1,7 +1,7 @@
 package com.exam.movierental.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.exam.movierental.beans.UserBean;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
@@ -25,7 +25,7 @@ public class User {
 	
 	@OneToMany(mappedBy = "user")
 	@JsonManagedReference
-	private Set<Rental> rentalsSet = new HashSet<Rental>();
+	private List<Rental> rentalList = new ArrayList<Rental>();
 	
 	public User() {
 		
@@ -61,13 +61,15 @@ public class User {
 		this.emailAddress = emailAddress;
 	}
 
-	public Set<Rental> getRentalsSet() {
-		return rentalsSet;
+	public List<Rental> getRentalList() {
+		return rentalList;
 	}
 
-	public void setRentalsSet(Set<Rental> rentalsSet) {
-		this.rentalsSet = rentalsSet;
+	public void setRentalList(List<Rental> rentalList) {
+		this.rentalList = rentalList;
 	}
+
+	
 	
 	
 

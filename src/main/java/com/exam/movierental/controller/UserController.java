@@ -1,6 +1,8 @@
 package com.exam.movierental.controller;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,39 +26,54 @@ public class UserController {
 	private UserService userService;
 
 	@PostMapping("/createUser")
-	public UserBean createUser(UserBean userBean) {
+	public Map<String, Object> createUser(UserBean userBean) {
 		logger.info("UserController | createUser | start");
+		Map<String, Object> returnMap = new HashMap<String, Object>();
 		try {
 			logger.info("UserController | createUser | end");
 			userBean.setId(userService.createUser(userBean));
+			returnMap.put("success", true);
+			returnMap.put("data", userBean);
 		} catch (Exception e) {
+			returnMap.put("success", false);
+			returnMap.put("message", e.getMessage());
 			logger.info("UserController | createUser | Exception: " + e.getMessage());
 		}
-		return userBean;
+		return returnMap;
 	}
 
 	@GetMapping("/findAllUser")
-	public List<UserBean> findAllUser() {
+	public Map<String, Object> findAllUser() {
 		logger.info("UserController | findAllUser | start");
+		Map<String, Object> returnMap = new HashMap<String, Object>();
 		try {
 			logger.info("UserController | findAllUser | end");
-			return userService.findAllUser();
+			List<UserBean> userBeanList = userService.findAllUser();
+			returnMap.put("success", true);
+			returnMap.put("data", userBeanList);
 		} catch (Exception e) {
+			returnMap.put("success", false);
+			returnMap.put("message", e.getMessage());
 			logger.info("UserController | findAllUser | Exception: " + e.getMessage());
 		}
-		return null;
+		return returnMap;
 	}
 
-	@GetMapping("/findAllUser/{id}")
-	public UserBean findUserById(@PathVariable("id") Long id) {
+	@GetMapping("/findUserHistory/{id}")
+	public Map<String, Object> findUserHistory(@PathVariable("id") Long id) {
 		logger.info("UserController | findUserById | start");
+		Map<String, Object> returnMap = new HashMap<String, Object>();
 		try {
 			logger.info("UserController | findUserById | end");
-			return userService.findUserById(id);
+			UserBean userBean = userService.findUserById(id);
+			returnMap.put("success", true);
+			returnMap.put("data", userBean);
 		} catch (Exception e) {
+			returnMap.put("success", false);
+			returnMap.put("message", e.getMessage());
 			logger.info("UserController | findUserById | Exception: " + e.getMessage());
 		}
-		return null;
+		return returnMap;
 	}
 
 }
