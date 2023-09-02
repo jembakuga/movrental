@@ -11,8 +11,10 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name="user_")
 public class User {
 	
 	@Id
@@ -33,7 +35,7 @@ public class User {
 	
 	public User(UserBean userBean) {
 		this.name = userBean.getName();
-		this.emailAddress = userBean.getEmailAddres();
+		this.emailAddress = userBean.getEmailAddress();
 		this.id = userBean.getId();
 	}
 

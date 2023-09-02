@@ -12,7 +12,7 @@ public class UserBean {
 
 	private String name;
 
-	private String emailAddres;
+	private String emailAddress;
 	
 	private List<RentalBean> rentalBeanList = new ArrayList<RentalBean>();
 	
@@ -23,7 +23,7 @@ public class UserBean {
 	public UserBean(User user) {
 		this.id = user.getId();
 		this.name = user.getName();
-		this.emailAddres = user.getEmailAddress();
+		this.emailAddress = user.getEmailAddress();
 		for(Rental rental : user.getRentalList()) {
 			RentalBean bean = new RentalBean(rental);
 			this.rentalBeanList.add(bean);
@@ -46,12 +46,12 @@ public class UserBean {
 		this.name = name;
 	}
 
-	public String getEmailAddres() {
-		return emailAddres;
+	public String getEmailAddress() {
+		return emailAddress;
 	}
 
-	public void setEmailAddres(String emailAddres) {
-		this.emailAddres = emailAddres;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
 
 	public List<RentalBean> getRentalBeanList() {

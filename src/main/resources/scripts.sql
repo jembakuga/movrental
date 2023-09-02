@@ -8,7 +8,7 @@ CREATE TABLE `kain-db`.movie (
 	CONSTRAINT MOVIES_PK PRIMARY KEY (ID)
 )
 
-CREATE TABLE `kain-db`.`user` (
+CREATE TABLE `kain-db`.`user_` (
 	ID BIGINT auto_increment NOT NULL,
 	NAME varchar(100) NOT NULL,
 	EMAIL_ADDRESS varchar(100) NOT NULL,
