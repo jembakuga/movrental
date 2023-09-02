@@ -46,7 +46,7 @@ public class RentalController {
 		try {			
 			logger.info("RentalController | returnMovie | end");
 			returnMap.put("success", true);
-			//returnMap.put("data", rentalService.rent(userId, movieId));
+			returnMap.put("data", rentalService.returnMovie(rentId));
 		} catch (Exception e) {
 			logger.info("RentalController | returnMovie | Exception: " + e.getMessage());
 			returnMap.put("success", false);

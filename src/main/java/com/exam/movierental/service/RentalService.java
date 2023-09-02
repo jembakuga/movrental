@@ -13,12 +13,16 @@ import org.springframework.stereotype.Service;
 import com.exam.movierental.entity.Movie;
 import com.exam.movierental.entity.Rental;
 import com.exam.movierental.entity.User;
+import com.exam.movierental.exception.MovieAlreadyReturnedException;
 import com.exam.movierental.exception.MovieDoesNotExistException;
 import com.exam.movierental.exception.NoAvailableMovieException;
+import com.exam.movierental.exception.RentDoesNotExistException;
 import com.exam.movierental.exception.UserDoesNotExistException;
 import com.exam.movierental.repository.MovieRepository;
 import com.exam.movierental.repository.RentalRepository;
 import com.exam.movierental.repository.UserRepository;
+
+import jakarta.transaction.Transactional;
 
 @Service
 public class RentalService {
@@ -57,6 +61,7 @@ public class RentalService {
 			rental.setDueDate(computeDueDate());
 			rental.setMovie(movie);
 			rental.setUser(user);
+			rental.setReturned("N");
 			rentalRepository.save(rental);
 			movie.setNoOfCopies(movie.getNoOfCopies() - 1);
 			movieRepository.save(movie);
@@ -65,6 +70,27 @@ public class RentalService {
 		} else {
 			throw new NoAvailableMovieException();
 		}
+	}
+	
+	@Transactional
+	public Long returnMovie(Long rentId)throws RentDoesNotExistException, MovieAlreadyReturnedException {
+		logger.info("RentalService | returnMovie | start");
+		Optional<Rental> rentalOptional = rentalRepository.findById(rentId);
+		if(rentalOptional.isPresent()) {
+			Rental rental = rentalOptional.get();
+			if(rental.getReturned().equals("Y")) {
+				throw new MovieAlreadyReturnedException();
+			}
+			rental.setReturned("Y");
+			rentalRepository.save(rental);
+			Movie movie = rental.getMovie();
+			movie.setNoOfCopies(movie.getNoOfCopies() + 1);
+			movieRepository.save(movie);
+		}else {
+			throw new RentDoesNotExistException();
+		}
+		logger.info("RentalService | returnMovie | end");
+		return rentId;
 	}
 
 	public Timestamp getCurrentDate() {
