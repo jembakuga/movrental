@@ -10,14 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.exam.movierental.beans.UserBean;
-import com.exam.movierental.beans.UserBean;
 import com.exam.movierental.entity.User;
-import com.exam.movierental.entity.User;
+import com.exam.movierental.exception.UserDoesNotExistException;
 import com.exam.movierental.repository.UserRepository;
 
 @Service
 public class UserService {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(UserService.class);
 
 	@Autowired
@@ -25,40 +24,30 @@ public class UserService {
 
 	public Long createUser(UserBean userBean) {
 		logger.info("UserService | createUser | start");
-		try {
-			logger.info("UserService | createUser | end");
-			User user = new User(userBean);
-			return userRepository.save(user).getId();
-		} catch (Exception e) {
-			logger.info("UserService | createUser | Exception: " + e.getMessage());
-		}
-		return null;
+		User user = new User(userBean);
+		logger.info("UserService | createUser | end");
+		return userRepository.save(user).getId();
+
 	}
-	
-	public List<UserBean> findAllUser(){
+
+	public List<UserBean> findAllUser() {
 		logger.info("UserService | findAllUser | start");
-		try {
-			List<UserBean> UserBeans = new ArrayList<UserBean>();
-			for (User tmp : userRepository.findAll()) {
-				UserBeans.add(new UserBean(tmp));
-			}
-			logger.info("UserService | findAllUser | end");
-			return UserBeans;
-		} catch (Exception e) {
-			logger.info("UserService | findAllUser | Exception " + e.getMessage());
+		List<UserBean> userBeanList = new ArrayList<UserBean>();
+		for (User tmp : userRepository.findAll()) {
+			userBeanList.add(new UserBean(tmp));
 		}
-		return null;
+		logger.info("UserService | findAllUser | end");
+		return userBeanList;
 	}
-	
-	public UserBean findUserById(Long id) {
+
+	public UserBean findUserById(Long id) throws UserDoesNotExistException{
 		logger.info("UserService | findUserById | start");
-		try {
-			Optional<User> user = userRepository.findById(id);
-			return user.isPresent() ? new UserBean(user.get()) : null;
-		} catch (Exception e) {
-			logger.info("UserService | findUserById | Exception " + e.getMessage());
+		Optional<User> user = userRepository.findById(id);
+		if(user.isPresent()) {
+			return new UserBean(user.get());
+		}else {
+			throw new UserDoesNotExistException();
 		}
-		return null;
 	}
 
 }

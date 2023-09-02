@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 import com.exam.movierental.entity.Movie;
 import com.exam.movierental.entity.Rental;
 import com.exam.movierental.entity.User;
+import com.exam.movierental.exception.MovieDoesNotExistException;
 import com.exam.movierental.exception.NoAvailableMovieException;
+import com.exam.movierental.exception.UserDoesNotExistException;
 import com.exam.movierental.repository.MovieRepository;
 import com.exam.movierental.repository.RentalRepository;
 import com.exam.movierental.repository.UserRepository;
@@ -32,14 +34,24 @@ public class RentalService {
 	@Autowired
 	private UserRepository userRepository;
 
-	public Long rent(Long userId, Long movieId) throws NoAvailableMovieException {
+	public Long rent(Long userId, Long movieId)
+			throws NoAvailableMovieException, MovieDoesNotExistException, UserDoesNotExistException {
 		logger.info("RentalService | rent | start");
-
+		Movie movie = null;
+		User user = null;
 		Optional<User> userOptional = userRepository.findById(userId);
 		Optional<Movie> movieOptional = movieRepository.findById(movieId);
-		Movie movie = movieOptional.get();
+		if (userOptional.isPresent()) {
+			user = userOptional.get();
+		} else {
+			throw new UserDoesNotExistException();
+		}
+		if (movieOptional.isPresent()) {
+			movie = movieOptional.get();
+		} else {
+			throw new MovieDoesNotExistException();
+		}
 		if (movie.getNoOfCopies() > 0) {
-			User user = userOptional.get();
 			Rental rental = new Rental();
 			rental.setRentalDate(getCurrentDate());
 			rental.setDueDate(computeDueDate());

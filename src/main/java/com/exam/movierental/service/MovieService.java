@@ -11,40 +11,35 @@ import org.springframework.stereotype.Service;
 
 import com.exam.movierental.beans.MovieBean;
 import com.exam.movierental.entity.Movie;
+import com.exam.movierental.exception.MovieDoesNotExistException;
 import com.exam.movierental.repository.MovieRepository;
 
 @Service
 public class MovieService {
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(MovieService.class);
 
 	@Autowired
 	private MovieRepository moviesRepository;
-	
-	public List<MovieBean> findAllMovies(){
+
+	public List<MovieBean> findAllMovies() {
 		logger.info("MoviesService | findAllMovies | start");
-		try {
-			List<MovieBean> MoviesBeans = new ArrayList<MovieBean>();
-			for (Movie tmp : moviesRepository.findAll()) {
-				MoviesBeans.add(new MovieBean(tmp));
-			}
-			logger.info("MoviesService | findAllMovies | end");
-			return MoviesBeans;
-		} catch (Exception e) {
-			logger.info("MoviesService | findAllMovies | Exception " + e.getMessage());
+		List<MovieBean> MoviesBeans = new ArrayList<MovieBean>();
+		for (Movie tmp : moviesRepository.findAll()) {
+			MoviesBeans.add(new MovieBean(tmp));
 		}
-		return null;
+		logger.info("MoviesService | findAllMovies | end");
+		return MoviesBeans;
 	}
-	
-	public MovieBean findMoviesById(Long id) {
+
+	public MovieBean findMoviesById(Long id)throws MovieDoesNotExistException {
 		logger.info("MoviesService | findMoviesById | start");
-		try {
 			Optional<Movie> movies = moviesRepository.findById(id);
-			return movies.isPresent() ? new MovieBean(movies.get()) : null;
-		} catch (Exception e) {
-			logger.info("MoviesService | findMoviesById | Exception " + e.getMessage());
-		}
-		return null;
+			if( movies.isPresent()) {
+				return new MovieBean(movies.get());
+			}else {
+				throw new MovieDoesNotExistException();
+			}
 	}
 
 }
