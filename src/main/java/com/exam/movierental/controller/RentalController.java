@@ -38,5 +38,21 @@ public class RentalController {
 		}
 		return returnMap;
 	}
+	
+	@PostMapping("/returnMovie/{rentId}")
+	public Map<String, Object> returnMovie(@PathVariable("rentId") Long rentId) {
+		logger.info("RentalController | returnMovie | start");
+		Map<String, Object> returnMap = new HashMap<String, Object>();	
+		try {			
+			logger.info("RentalController | returnMovie | end");
+			returnMap.put("success", true);
+			//returnMap.put("data", rentalService.rent(userId, movieId));
+		} catch (Exception e) {
+			logger.info("RentalController | returnMovie | Exception: " + e.getMessage());
+			returnMap.put("success", false);
+			returnMap.put("message", e.getMessage());
+		}
+		return returnMap;
+	}
 
 }

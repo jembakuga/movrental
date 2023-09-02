@@ -13,7 +13,7 @@ public class RentalBean {
 	private Timestamp rentalDate;
 
 	private Timestamp dueDate;
-
+	
 	public RentalBean() {
 
 	}

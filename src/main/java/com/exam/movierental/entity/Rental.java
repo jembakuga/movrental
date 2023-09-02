@@ -31,6 +31,8 @@ public class Rental {
 	private Timestamp rentalDate;
 	
 	private Timestamp dueDate;
+	
+	private String returned;
 
 	public Long getId() {
 		return id;
@@ -70,6 +72,14 @@ public class Rental {
 
 	public void setDueDate(Timestamp dueDate) {
 		this.dueDate = dueDate;
+	}
+
+	public String getReturned() {
+		return returned;
+	}
+
+	public void setReturned(String returned) {
+		this.returned = returned;
 	}
 	
 	
