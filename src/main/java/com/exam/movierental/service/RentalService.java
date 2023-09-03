@@ -38,7 +38,7 @@ public class RentalService {
 	@Autowired
 	private UserRepository userRepository;
 
-	public Long rent(Long userId, Long movieId)
+	public Rental rent(Long userId, Long movieId)
 			throws NoAvailableMovieException, MovieDoesNotExistException, UserDoesNotExistException {
 		logger.info("RentalService | rent | start");
 		Movie movie = null;
@@ -66,18 +66,19 @@ public class RentalService {
 			movie.setNoOfCopies(movie.getNoOfCopies() - 1);
 			movieRepository.save(movie);
 			logger.info("RentalService | rent | end");
-			return rental.getId();
+			return rental;
 		} else {
 			throw new NoAvailableMovieException();
 		}
 	}
 	
 	@Transactional
-	public Long returnMovie(Long rentId)throws RentDoesNotExistException, MovieAlreadyReturnedException {
+	public Rental returnMovie(Long rentId)throws RentDoesNotExistException, MovieAlreadyReturnedException {
 		logger.info("RentalService | returnMovie | start");
 		Optional<Rental> rentalOptional = rentalRepository.findById(rentId);
+		Rental rental = null;
 		if(rentalOptional.isPresent()) {
-			Rental rental = rentalOptional.get();
+			rental = rentalOptional.get();
 			if(rental.getReturned().equals("Y")) {
 				throw new MovieAlreadyReturnedException();
 			}
@@ -90,7 +91,7 @@ public class RentalService {
 			throw new RentDoesNotExistException();
 		}
 		logger.info("RentalService | returnMovie | end");
-		return rentId;
+		return rental;
 	}
 
 	public Timestamp getCurrentDate() {

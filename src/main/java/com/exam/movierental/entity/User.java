@@ -31,6 +31,12 @@ public class User {
 	
 	public User() {
 		
+	}	
+
+	public User(Long id, String name, String emailAddress) {
+		this.id = id;
+		this.name = name;
+		this.emailAddress = emailAddress;
 	}
 	
 	public User(UserBean userBean) {
@@ -38,6 +44,7 @@ public class User {
 		this.emailAddress = userBean.getEmailAddress();
 		this.id = userBean.getId();
 	}
+	
 
 	public Long getId() {
 		return id;

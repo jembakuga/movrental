@@ -17,6 +17,13 @@ public class RentalBean {
 	public RentalBean() {
 
 	}
+	
+	public RentalBean(Long id, MovieBean movieBean, Timestamp rentalDate, Timestamp dueDate) {
+		this.id = id;
+		this.movieBean = movieBean;
+		this.rentalDate = rentalDate;
+		this.dueDate = dueDate;
+	}
 
 	public RentalBean(Rental rental) {
 		this.id = rental.getId();

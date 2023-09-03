@@ -29,14 +29,8 @@ class UserServiceTest {
 	
 	@Test
 	public void UserService_CreateUser_ReturnsUser() {
-		User user = new User();
-		user.setEmailAddress("testa@asf.com");
-		user.setName("user 1");
-		user.setId(1L);
-		
-		UserBean userBean = new UserBean();
-		userBean.setEmailAddress("testa@asf.com");
-		userBean.setName("user 1");
+		User user = new User(1L, "user 1", "test@asdf.com");		
+		UserBean userBean = new UserBean(null, "user 1", "test@asdf.com");
 		
 		when(userRepository.save(Mockito.any(User.class))).thenReturn(user);		
 		Long id = userService.createUser(userBean);		
@@ -46,16 +40,8 @@ class UserServiceTest {
 	
 	@Test
 	public void UserService_FindAll_ReturnUserMultiple() {
-		User user = new User();
-		user.setEmailAddress("testa@asf.com");
-		user.setName("user 1");
-		user.setId(1L);
-		
-		User user2 = new User();
-		user2.setEmailAddress("testa@asf.com");
-		user2.setName("user 2");
-		user2.setId(2L);
-		
+		User user = new User(1L, "user 1", "testa@asf.com");		
+		User user2 = new User(2L, "user 2", "testa@asf.com");		
 		List<User> userList = new ArrayList<User>();
 		userList.add(user);
 		userList.add(user2);
@@ -66,16 +52,12 @@ class UserServiceTest {
 	
 	@Test
 	public void UserService_FindById_ReturnUser() throws Exception {
-		User user = new User();
-		user.setEmailAddress("testa@asf.com");
-		user.setName("user 1");
-		user.setId(1L);
+		User user = new User(1L, "user 1", "testa@asf.com");
 		
 		when(userRepository.findById(1L)).thenReturn(Optional.ofNullable(user));		
 		UserBean userBean = userService.findUserById(1L);		
 		Assertions.assertThat(userBean).isNotNull();
 		Assertions.assertThat(userBean.getId()).isEqualTo(1);
-		//Assertions.assertThatException();
 		
 	}
 

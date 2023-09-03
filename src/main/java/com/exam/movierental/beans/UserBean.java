@@ -20,6 +20,12 @@ public class UserBean {
 		
 	}
 	
+	public UserBean(Long id, String name, String emailAddress) {
+		this.id = id;
+		this.name = name;
+		this.emailAddress = emailAddress;
+	}
+	
 	public UserBean(User user) {
 		this.id = user.getId();
 		this.name = user.getName();

@@ -18,6 +18,15 @@ public class MovieBean {
 
 	private int noOfCopies;
 	
+	public MovieBean(Long id, String title, String genre,  int releaeYear, BigDecimal rentalPrice, int noOfCopies) {
+		this.id = id;
+		this.title = title;
+		this.genre = genre;
+		this.releaseYear = releaeYear;
+		this.rentalPrice = rentalPrice;
+		this.noOfCopies = noOfCopies;
+	}
+	
 	public MovieBean(Movie movies) {
 		this.id = movies.getId();
 		this.title = movies.getTitle();
