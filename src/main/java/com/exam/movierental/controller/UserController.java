@@ -26,12 +26,13 @@ public class UserController {
 	private UserService userService;
 
 	@PostMapping("/createUser")
-	public Map<String, Object> createUser(UserBean userBean) {
+	public Map<String, Object> createUser(String name, String emailAddress) {
 		logger.info("UserController | createUser | start");
 		Map<String, Object> returnMap = new HashMap<String, Object>();
 		try {
 			logger.info("UserController | createUser | end");
-			userBean.setId(userService.createUser(userBean));
+			UserBean userBean = new UserBean(null, name, emailAddress);
+			userBean.setId(userService.createUser(userBean).getId());
 			returnMap.put("success", true);
 			returnMap.put("data", userBean);
 		} catch (Exception e) {

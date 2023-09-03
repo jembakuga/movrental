@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import com.exam.movierental.beans.MovieBean;
 import com.exam.movierental.entity.Movie;
+import com.exam.movierental.entity.User;
 import com.exam.movierental.exception.MovieDoesNotExistException;
 import com.exam.movierental.repository.MovieRepository;
 
@@ -21,6 +22,14 @@ public class MovieService {
 
 	@Autowired
 	private MovieRepository moviesRepository;
+	
+	public Movie createMovie(MovieBean movieBean) {
+		logger.info("MovieService | createMovie | start");
+		Movie movie = new Movie(movieBean);
+		logger.info("MovieService | createMovie | end");
+		return moviesRepository.save(movie);
+
+	}
 
 	public List<MovieBean> findAllMovies() {
 		logger.info("MoviesService | findAllMovies | start");

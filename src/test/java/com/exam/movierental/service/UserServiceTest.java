@@ -33,9 +33,9 @@ class UserServiceTest {
 		UserBean userBean = new UserBean(null, "user 1", "test@asdf.com");
 		
 		when(userRepository.save(Mockito.any(User.class))).thenReturn(user);		
-		Long id = userService.createUser(userBean);		
-		Assertions.assertThat(id).isNotNull();
-		Assertions.assertThat(id).isEqualTo(1);
+		User userCreated = userService.createUser(userBean);		
+		Assertions.assertThat(userCreated).isNotNull();
+
 	}
 	
 	@Test

@@ -27,13 +27,13 @@ public class MovieBean {
 		this.noOfCopies = noOfCopies;
 	}
 	
-	public MovieBean(Movie movies) {
-		this.id = movies.getId();
-		this.title = movies.getTitle();
-		this.genre = movies.getGenre();
-		this.releaseYear = movies.getReleaseYear();
-		this.rentalPrice = movies.getRentalPrice();
-		this.noOfCopies = movies.getNoOfCopies();
+	public MovieBean(Movie movie) {
+		this.id = movie.getId();
+		this.title = movie.getTitle();
+		this.genre = movie.getGenre();
+		this.releaseYear = movie.getReleaseYear();
+		this.rentalPrice = movie.getRentalPrice();
+		this.noOfCopies = movie.getNoOfCopies();
 	}
 
 	public Long getId() {

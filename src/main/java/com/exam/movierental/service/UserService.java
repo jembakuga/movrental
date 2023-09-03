@@ -22,11 +22,11 @@ public class UserService {
 	@Autowired
 	private UserRepository userRepository;
 
-	public Long createUser(UserBean userBean) {
+	public User createUser(UserBean userBean) {
 		logger.info("UserService | createUser | start");
 		User user = new User(userBean);
 		logger.info("UserService | createUser | end");
-		return userRepository.save(user).getId();
+		return userRepository.save(user);
 
 	}
 

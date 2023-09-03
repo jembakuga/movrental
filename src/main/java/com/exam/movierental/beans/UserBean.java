@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.exam.movierental.entity.Rental;
 import com.exam.movierental.entity.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 public class UserBean {
 
