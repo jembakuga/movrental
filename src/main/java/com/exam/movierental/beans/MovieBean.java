@@ -36,6 +36,8 @@ public class MovieBean {
 		this.noOfCopies = movie.getNoOfCopies();
 	}
 
+	
+	
 	public MovieBean() {
 	}
 
