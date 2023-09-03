@@ -17,8 +17,8 @@ public class MovieBean {
 	private BigDecimal rentalPrice;
 
 	private int noOfCopies;
-	
-	public MovieBean(Long id, String title, String genre,  int releaeYear, BigDecimal rentalPrice, int noOfCopies) {
+
+	public MovieBean(Long id, String title, String genre, int releaeYear, BigDecimal rentalPrice, int noOfCopies) {
 		this.id = id;
 		this.title = title;
 		this.genre = genre;
@@ -26,7 +26,7 @@ public class MovieBean {
 		this.rentalPrice = rentalPrice;
 		this.noOfCopies = noOfCopies;
 	}
-	
+
 	public MovieBean(Movie movie) {
 		this.id = movie.getId();
 		this.title = movie.getTitle();
@@ -34,6 +34,9 @@ public class MovieBean {
 		this.releaseYear = movie.getReleaseYear();
 		this.rentalPrice = movie.getRentalPrice();
 		this.noOfCopies = movie.getNoOfCopies();
+	}
+
+	public MovieBean() {
 	}
 
 	public Long getId() {
@@ -83,7 +86,5 @@ public class MovieBean {
 	public void setNoOfCopies(int noOfCopies) {
 		this.noOfCopies = noOfCopies;
 	}
-	
-	
 
 }

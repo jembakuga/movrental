@@ -602,3 +602,272 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2023-09-03T19:49:59.677+08:00  INFO 18468 --- [http-nio-8080-exec-7] c.e.m.controller.MovieController         : MoviesController | findAllMovies | end
 2023-09-03T19:49:59.677+08:00  INFO 18468 --- [http-nio-8080-exec-7] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | start
 2023-09-03T19:49:59.700+08:00  INFO 18468 --- [http-nio-8080-exec-7] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | end
+2023-09-03T19:56:40.237+08:00  INFO 25224 --- [main] c.e.m.repository.UserRepositoryTest      : Starting UserRepositoryTest using Java 17.0.8 with PID 25224 (started by jemue in D:\Jem\movrental\movrental)
+2023-09-03T19:56:40.240+08:00  INFO 25224 --- [main] c.e.m.repository.UserRepositoryTest      : No active profile set, falling back to 1 default profile: "default"
+2023-09-03T19:56:40.762+08:00  INFO 25224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-03T19:56:40.833+08:00  INFO 25224 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 3 JPA repository interfaces.
+2023-09-03T19:56:40.898+08:00  INFO 25224 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-09-03T19:56:41.183+08:00  INFO 25224 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:536d8d6e-23e1-4609-8fd8-6a56c326dacd;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-09-03T19:56:41.569+08:00  INFO 25224 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-03T19:56:41.634+08:00  INFO 25224 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-03T19:56:41.638+08:00  INFO 25224 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-03T19:56:41.796+08:00  INFO 25224 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T19:56:41.955+08:00  INFO 25224 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-03T19:56:42.330+08:00  INFO 25224 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T19:56:43.175+08:00  INFO 25224 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-03T19:56:43.232+08:00  INFO 25224 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T19:56:43.856+08:00  INFO 25224 --- [main] c.e.m.repository.UserRepositoryTest      : Started UserRepositoryTest in 4.143 seconds (process running for 5.455)
+2023-09-03T19:56:45.601+08:00  INFO 25224 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T19:56:45.636+08:00  INFO 25224 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T19:56:45.637+08:00  INFO 25224 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | end
+2023-09-03T19:56:45.651+08:00  INFO 25224 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T19:56:45.665+08:00  INFO 25224 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T19:56:45.682+08:00  INFO 25224 --- [main] c.exam.movierental.service.UserService   : UserService | findAllUser | start
+2023-09-03T19:56:45.684+08:00  INFO 25224 --- [main] c.exam.movierental.service.UserService   : UserService | findAllUser | end
+2023-09-03T19:56:45.693+08:00  INFO 25224 --- [main] c.exam.movierental.service.UserService   : UserService | findUserById | start
+2023-09-03T19:56:45.706+08:00  INFO 25224 --- [main] c.exam.movierental.service.UserService   : UserService | createUser | start
+2023-09-03T19:56:45.707+08:00  INFO 25224 --- [main] c.exam.movierental.service.UserService   : UserService | createUser | end
+2023-09-03T19:56:45.761+08:00  INFO 25224 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T19:56:55.965+08:00  INFO 1068 --- [main] c.e.movierental.MovierentalApplication   : Starting MovierentalApplication using Java 17.0.8 with PID 1068 (D:\Jem\movrental\movrental\target\classes started by jemue in D:\Jem\movrental\movrental)
+2023-09-03T19:56:55.969+08:00  INFO 1068 --- [main] c.e.movierental.MovierentalApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-09-03T19:56:57.317+08:00  INFO 1068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-03T19:56:57.434+08:00  INFO 1068 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 3 JPA repository interfaces.
+2023-09-03T19:56:58.364+08:00  INFO 1068 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-03T19:56:58.379+08:00  INFO 1068 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-03T19:56:58.379+08:00  INFO 1068 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-03T19:56:58.539+08:00  INFO 1068 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-03T19:56:58.540+08:00  INFO 1068 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2502 ms
+2023-09-03T19:56:58.779+08:00  INFO 1068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-03T19:56:59.265+08:00  INFO 1068 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@28393e82
+2023-09-03T19:56:59.268+08:00  INFO 1068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-03T19:56:59.324+08:00  INFO 1068 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-03T19:56:59.385+08:00  INFO 1068 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-03T19:56:59.388+08:00  INFO 1068 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-03T19:56:59.616+08:00  INFO 1068 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T19:56:59.819+08:00  INFO 1068 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-03T19:57:00.293+08:00  INFO 1068 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T19:57:01.040+08:00  INFO 1068 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-03T19:57:01.043+08:00  INFO 1068 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T19:57:01.648+08:00  WARN 1068 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-03T19:57:02.858+08:00  WARN 1068 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-09-03T19:57:02.860+08:00  INFO 1068 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T19:57:02.864+08:00  INFO 1068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-09-03T19:57:02.884+08:00  INFO 1068 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-09-03T19:57:02.887+08:00  INFO 1068 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-09-03T19:57:02.907+08:00  INFO 1068 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-03T19:57:02.936+08:00 ERROR 1068 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-09-03T19:57:15.795+08:00  INFO 5508 --- [main] c.e.movierental.MovierentalApplication   : Starting MovierentalApplication using Java 17.0.8 with PID 5508 (D:\Jem\movrental\movrental\target\classes started by jemue in D:\Jem\movrental\movrental)
+2023-09-03T19:57:15.798+08:00  INFO 5508 --- [main] c.e.movierental.MovierentalApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-09-03T19:57:16.946+08:00  INFO 5508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-03T19:57:17.052+08:00  INFO 5508 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 3 JPA repository interfaces.
+2023-09-03T19:57:17.880+08:00  INFO 5508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-03T19:57:17.891+08:00  INFO 5508 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-03T19:57:17.891+08:00  INFO 5508 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-03T19:57:18.050+08:00  INFO 5508 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-03T19:57:18.050+08:00  INFO 5508 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2188 ms
+2023-09-03T19:57:18.258+08:00  INFO 5508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-03T19:57:18.632+08:00  INFO 5508 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79957f11
+2023-09-03T19:57:18.634+08:00  INFO 5508 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-03T19:57:18.692+08:00  INFO 5508 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-03T19:57:18.762+08:00  INFO 5508 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-03T19:57:18.768+08:00  INFO 5508 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-03T19:57:19.022+08:00  INFO 5508 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T19:57:19.240+08:00  INFO 5508 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-03T19:57:19.620+08:00  INFO 5508 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T19:57:20.396+08:00  INFO 5508 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-03T19:57:20.400+08:00  INFO 5508 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T19:57:21.011+08:00  WARN 5508 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-03T19:57:22.214+08:00  INFO 5508 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-03T19:57:22.228+08:00  INFO 5508 --- [main] c.e.movierental.MovierentalApplication   : Started MovierentalApplication in 6.995 seconds (process running for 7.56)
+2023-09-03T19:59:02.603+08:00  INFO 5508 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-03T19:59:02.603+08:00  INFO 5508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-03T19:59:02.604+08:00  INFO 5508 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-09-03T19:59:03.158+08:00  INFO 5508 --- [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 403 ms
+2023-09-03T19:59:09.552+08:00  INFO 5508 --- [http-nio-8080-exec-4] c.e.m.controller.MovieController         : MoviesController | findAllMovies | start
+2023-09-03T19:59:09.552+08:00  INFO 5508 --- [http-nio-8080-exec-4] c.e.m.controller.MovieController         : MoviesController | findAllMovies | end
+2023-09-03T19:59:09.552+08:00  INFO 5508 --- [http-nio-8080-exec-4] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | start
+2023-09-03T19:59:09.755+08:00  INFO 5508 --- [http-nio-8080-exec-4] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | end
+2023-09-03T19:59:48.537+08:00 ERROR 5508 --- [http-nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalStateException: No primary or single unique constructor found for class com.exam.movierental.beans.MovieBean] with root cause
+
+java.lang.IllegalStateException: No primary or single unique constructor found for class com.exam.movierental.beans.MovieBean
+	at org.springframework.beans.BeanUtils.getResolvableConstructor(BeanUtils.java:268) ~[spring-beans-6.0.11.jar:6.0.11]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.createAttribute(ModelAttributeMethodProcessor.java:221) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.createAttribute(ServletModelAttributeMethodProcessor.java:85) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:149) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.12.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.0.11.jar:6.0.11]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.12.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.0.11.jar:6.0.11]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-10.1.12.jar:10.1.12]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2023-09-03T20:00:41.631+08:00  INFO 24936 --- [main] c.e.m.repository.UserRepositoryTest      : Starting UserRepositoryTest using Java 17.0.8 with PID 24936 (started by jemue in D:\Jem\movrental\movrental)
+2023-09-03T20:00:41.633+08:00  INFO 24936 --- [main] c.e.m.repository.UserRepositoryTest      : No active profile set, falling back to 1 default profile: "default"
+2023-09-03T20:00:42.128+08:00  INFO 24936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-03T20:00:42.206+08:00  INFO 24936 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 3 JPA repository interfaces.
+2023-09-03T20:00:42.271+08:00  INFO 24936 --- [main] beddedDataSourceBeanFactoryPostProcessor : Replacing 'dataSource' DataSource bean with embedded version
+2023-09-03T20:00:42.529+08:00  INFO 24936 --- [main] o.s.j.d.e.EmbeddedDatabaseFactory        : Starting embedded database: url='jdbc:h2:mem:a6563c8a-b4ec-4ae1-8d27-62cbab1b6e40;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2023-09-03T20:00:42.897+08:00  INFO 24936 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-03T20:00:42.982+08:00  INFO 24936 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-03T20:00:42.985+08:00  INFO 24936 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-03T20:00:43.145+08:00  INFO 24936 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T20:00:43.295+08:00  INFO 24936 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-03T20:00:43.666+08:00  INFO 24936 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T20:00:44.576+08:00  INFO 24936 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-03T20:00:44.630+08:00  INFO 24936 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T20:00:45.222+08:00  INFO 24936 --- [main] c.e.m.repository.UserRepositoryTest      : Started UserRepositoryTest in 4.04 seconds (process running for 5.306)
+2023-09-03T20:00:46.843+08:00  INFO 24936 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T20:00:46.875+08:00  INFO 24936 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T20:00:46.877+08:00  INFO 24936 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | end
+2023-09-03T20:00:46.889+08:00  INFO 24936 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T20:00:46.901+08:00  INFO 24936 --- [main] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T20:00:46.922+08:00  INFO 24936 --- [main] c.exam.movierental.service.UserService   : UserService | findAllUser | start
+2023-09-03T20:00:46.923+08:00  INFO 24936 --- [main] c.exam.movierental.service.UserService   : UserService | findAllUser | end
+2023-09-03T20:00:46.931+08:00  INFO 24936 --- [main] c.exam.movierental.service.UserService   : UserService | findUserById | start
+2023-09-03T20:00:46.941+08:00  INFO 24936 --- [main] c.exam.movierental.service.UserService   : UserService | createUser | start
+2023-09-03T20:00:46.942+08:00  INFO 24936 --- [main] c.exam.movierental.service.UserService   : UserService | createUser | end
+2023-09-03T20:00:46.993+08:00  INFO 24936 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T20:00:56.017+08:00  INFO 13076 --- [main] c.e.movierental.MovierentalApplication   : Starting MovierentalApplication using Java 17.0.8 with PID 13076 (D:\Jem\movrental\movrental\target\classes started by jemue in D:\Jem\movrental\movrental)
+2023-09-03T20:00:56.020+08:00  INFO 13076 --- [main] c.e.movierental.MovierentalApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-09-03T20:00:57.263+08:00  INFO 13076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-03T20:00:57.366+08:00  INFO 13076 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+2023-09-03T20:00:58.226+08:00  INFO 13076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-09-03T20:00:58.241+08:00  INFO 13076 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-09-03T20:00:58.241+08:00  INFO 13076 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-03T20:00:58.426+08:00  INFO 13076 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-09-03T20:00:58.427+08:00  INFO 13076 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2321 ms
+2023-09-03T20:00:58.621+08:00  INFO 13076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-09-03T20:00:59.035+08:00  INFO 13076 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44e4cb76
+2023-09-03T20:00:59.037+08:00  INFO 13076 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-09-03T20:00:59.103+08:00  INFO 13076 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-03T20:00:59.191+08:00  INFO 13076 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-03T20:00:59.194+08:00  INFO 13076 --- [main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-09-03T20:00:59.438+08:00  INFO 13076 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T20:00:59.645+08:00  INFO 13076 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-03T20:01:00.116+08:00  INFO 13076 --- [main] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-09-03T20:01:00.837+08:00  INFO 13076 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-03T20:01:00.840+08:00  INFO 13076 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-03T20:01:01.440+08:00  WARN 13076 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-03T20:01:02.675+08:00  INFO 13076 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-09-03T20:01:02.687+08:00  INFO 13076 --- [main] c.e.movierental.MovierentalApplication   : Started MovierentalApplication in 7.337 seconds (process running for 8.03)
+2023-09-03T20:01:14.033+08:00  INFO 13076 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-03T20:01:14.034+08:00  INFO 13076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-09-03T20:01:14.036+08:00  INFO 13076 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-09-03T20:01:14.585+08:00  INFO 13076 --- [http-nio-8080-exec-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 393 ms
+2023-09-03T20:01:57.955+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.e.m.controller.MovieController         : MovieController | createMovie | start
+2023-09-03T20:01:57.955+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.e.m.controller.MovieController         : MovieController | createMovie | end
+2023-09-03T20:01:57.955+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.exam.movierental.service.MovieService  : MovieService | createMovie | start
+2023-09-03T20:01:57.955+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.exam.movierental.service.MovieService  : MovieService | createMovie | end
+2023-09-03T20:02:06.767+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.e.m.controller.MovieController         : MoviesController | findAllMovies | start
+2023-09-03T20:02:06.768+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.e.m.controller.MovieController         : MoviesController | findAllMovies | end
+2023-09-03T20:02:06.768+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | start
+2023-09-03T20:02:06.912+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | end
+2023-09-03T20:02:20.231+08:00  INFO 13076 --- [http-nio-8080-exec-6] c.e.m.controller.RentalController        : RentalController | rent | start
+2023-09-03T20:02:20.231+08:00  INFO 13076 --- [http-nio-8080-exec-6] c.e.m.controller.RentalController        : RentalController | rent | end
+2023-09-03T20:02:20.231+08:00  INFO 13076 --- [http-nio-8080-exec-6] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T20:02:20.314+08:00  INFO 13076 --- [http-nio-8080-exec-6] c.e.movierental.service.RentalService    : RentalService | rent | end
+2023-09-03T20:02:34.739+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.e.m.controller.MovieController         : MoviesController | findAllMovies | start
+2023-09-03T20:02:34.740+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.e.m.controller.MovieController         : MoviesController | findAllMovies | end
+2023-09-03T20:02:34.740+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | start
+2023-09-03T20:02:34.761+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | end
+2023-09-03T20:03:03.384+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.m.controller.RentalController        : RentalController | returnMovie | start
+2023-09-03T20:03:03.384+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.m.controller.RentalController        : RentalController | returnMovie | end
+2023-09-03T20:03:03.391+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.movierental.service.RentalService    : RentalService | returnMovie | start
+2023-09-03T20:03:03.399+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.movierental.service.RentalService    : RentalService | returnMovie | end
+2023-09-03T20:03:13.841+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.e.m.controller.MovieController         : MoviesController | findAllMovies | start
+2023-09-03T20:03:13.841+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.e.m.controller.MovieController         : MoviesController | findAllMovies | end
+2023-09-03T20:03:13.841+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | start
+2023-09-03T20:03:13.862+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.exam.movierental.service.MovieService  : MoviesService | findAllMovies | end
+2023-09-03T20:03:25.968+08:00  INFO 13076 --- [http-nio-8080-exec-10] c.e.m.controller.UserController          : UserController | findUserById | start
+2023-09-03T20:03:25.968+08:00  INFO 13076 --- [http-nio-8080-exec-10] c.e.m.controller.UserController          : UserController | findUserById | end
+2023-09-03T20:03:25.968+08:00  INFO 13076 --- [http-nio-8080-exec-10] c.exam.movierental.service.UserService   : UserService | findUserById | start
+2023-09-03T20:03:50.290+08:00  INFO 13076 --- [http-nio-8080-exec-1] c.e.m.controller.UserController          : UserController | createUser | start
+2023-09-03T20:03:50.290+08:00  INFO 13076 --- [http-nio-8080-exec-1] c.e.m.controller.UserController          : UserController | createUser | end
+2023-09-03T20:03:50.290+08:00  INFO 13076 --- [http-nio-8080-exec-1] c.exam.movierental.service.UserService   : UserService | createUser | start
+2023-09-03T20:03:50.290+08:00  INFO 13076 --- [http-nio-8080-exec-1] c.exam.movierental.service.UserService   : UserService | createUser | end
+2023-09-03T20:03:59.393+08:00  INFO 13076 --- [http-nio-8080-exec-2] c.e.m.controller.UserController          : UserController | findUserById | start
+2023-09-03T20:03:59.394+08:00  INFO 13076 --- [http-nio-8080-exec-2] c.e.m.controller.UserController          : UserController | findUserById | end
+2023-09-03T20:03:59.394+08:00  INFO 13076 --- [http-nio-8080-exec-2] c.exam.movierental.service.UserService   : UserService | findUserById | start
+2023-09-03T20:04:06.841+08:00  INFO 13076 --- [http-nio-8080-exec-3] c.e.m.controller.UserController          : UserController | findAllUser | start
+2023-09-03T20:04:06.841+08:00  INFO 13076 --- [http-nio-8080-exec-3] c.e.m.controller.UserController          : UserController | findAllUser | end
+2023-09-03T20:04:06.841+08:00  INFO 13076 --- [http-nio-8080-exec-3] c.exam.movierental.service.UserService   : UserService | findAllUser | start
+2023-09-03T20:04:06.882+08:00  INFO 13076 --- [http-nio-8080-exec-3] c.exam.movierental.service.UserService   : UserService | findAllUser | end
+2023-09-03T20:04:44.339+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.e.m.controller.MovieController         : MoviesController | findMoviesById | start
+2023-09-03T20:04:44.340+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.e.m.controller.MovieController         : MoviesController | findMoviesById | end
+2023-09-03T20:04:44.340+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.exam.movierental.service.MovieService  : MoviesService | findMoviesById | start
+2023-09-03T20:04:44.358+08:00  INFO 13076 --- [http-nio-8080-exec-4] c.e.m.controller.MovieController         : MoviesController | findMoviesById | Exception: Movie does not exist.
+2023-09-03T20:04:49.624+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.e.m.controller.MovieController         : MoviesController | findMoviesById | start
+2023-09-03T20:04:49.935+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.e.m.controller.MovieController         : MoviesController | findMoviesById | end
+2023-09-03T20:04:49.936+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.exam.movierental.service.MovieService  : MoviesService | findMoviesById | start
+2023-09-03T20:04:49.953+08:00  INFO 13076 --- [http-nio-8080-exec-5] c.e.m.controller.MovieController         : MoviesController | findMoviesById | Exception: Movie does not exist.
+2023-09-03T20:04:52.829+08:00  INFO 13076 --- [http-nio-8080-exec-6] c.e.m.controller.MovieController         : MoviesController | findMoviesById | start
+2023-09-03T20:04:52.829+08:00  INFO 13076 --- [http-nio-8080-exec-6] c.e.m.controller.MovieController         : MoviesController | findMoviesById | end
+2023-09-03T20:04:52.829+08:00  INFO 13076 --- [http-nio-8080-exec-6] c.exam.movierental.service.MovieService  : MoviesService | findMoviesById | start
+2023-09-03T20:05:04.236+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.e.m.controller.RentalController        : RentalController | returnMovie | start
+2023-09-03T20:05:04.236+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.e.m.controller.RentalController        : RentalController | returnMovie | end
+2023-09-03T20:05:04.241+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.e.movierental.service.RentalService    : RentalService | returnMovie | start
+2023-09-03T20:05:04.252+08:00  INFO 13076 --- [http-nio-8080-exec-7] c.e.m.controller.RentalController        : RentalController | returnMovie | Exception: Rent does not exist.
+2023-09-03T20:05:14.007+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.m.controller.RentalController        : RentalController | rent | start
+2023-09-03T20:05:14.007+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.m.controller.RentalController        : RentalController | rent | end
+2023-09-03T20:05:14.007+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T20:05:14.043+08:00  INFO 13076 --- [http-nio-8080-exec-8] c.e.m.controller.RentalController        : RentalController | rent | Exception: Movie does not exist.
+2023-09-03T20:05:23.206+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.e.m.controller.RentalController        : RentalController | rent | start
+2023-09-03T20:05:23.206+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.e.m.controller.RentalController        : RentalController | rent | end
+2023-09-03T20:05:23.207+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.e.movierental.service.RentalService    : RentalService | rent | start
+2023-09-03T20:05:23.238+08:00  INFO 13076 --- [http-nio-8080-exec-9] c.e.m.controller.RentalController        : RentalController | rent | Exception: User does not exist.
